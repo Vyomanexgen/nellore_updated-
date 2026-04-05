@@ -1,0 +1,128 @@
+/* Mobile Responsive Styles for Nellore.in */
+/* DO NOT change any component styles, colors, fonts - only layout changes */
+
+/* Mobile Breakpoint: < 768px (all iPhones, Android Compact) */
+@media (max-width: 767px) {
+  /* Top bar - smaller font */
+  .header-top-bar {
+    font-size: 10px !important;
+  }
+
+  /* Hide desktop navigation on mobile */
+  header nav.desktop-nav {
+    display: none !important;
+  }
+
+  /* Hero section adjustments */
+  .hero-section {
+    height: 50vh !important;
+    min-height: 400px;
+  }
+
+  /* Hide left sidebar on mobile */
+  aside.left-sidebar {
+    display: none !important;
+  }
+
+  /* Hide right ads column on mobile */
+  aside.ads-column {
+    display: none !important;
+  }
+
+  /* Single column layout for mobile */
+  .main-content-wrapper {
+    flex-direction: column !important;
+  }
+
+  /* Grid sections: 3-col → 1-col */
+  .grid-3-col {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Movie posters: 4-col → 2-col */
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Full width cards */
+  .content-card {
+    width: 100% !important;
+  }
+
+  /* Horizontal scroll for tables */
+  .results-table-container {
+    overflow-x: auto !important;
+  }
+
+  /* Update detail page: stacked layout */
+  .update-detail-layout {
+    flex-direction: column !important;
+  }
+
+  /* Search bar moves to hamburger or below logo */
+  .desktop-search {
+    display: none !important;
+  }
+
+  /* Mobile padding adjustments */
+  .page-wrapper {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Admin panel message on mobile */
+  .admin-panel-desktop-only::before {
+    content: 'Admin panel works best on desktop. Please use a larger screen.';
+    display: block;
+    padding: 20px;
+    text-align: center;
+    background: #FEF3C7;
+    border: 1px solid #F59E0B;
+    border-radius: 8px;
+    margin: 20px;
+  }
+}
+
+/* Tablet Breakpoint: 768px – 1023px (Android Medium, iPad Mini, iPad) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Hide left sidebar on tablet */
+  aside.left-sidebar {
+    display: none !important;
+  }
+
+  /* Right ads column visible but narrower */
+  aside.ads-column {
+    width: 220px !important;
+  }
+
+  /* Grid: 3-col → 2-col */
+  .grid-3-col {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Movie grid: 4-col → 3-col */
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Desktop Breakpoint: >= 1024px (iPad Pro, Desktop) */
+@media (min-width: 1024px) {
+  /* Full 3-column desktop layout - NO CHANGES */
+  /* This is the existing layout */
+}
+
+/* Back button tap target on mobile */
+@media (max-width: 767px) {
+  .back-button {
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+}
+
+/* Weather ticker responsive */
+@media (max-width: 767px) {
+  .weather-ticker {
+    font-size: 10px !important;
+  }
+}

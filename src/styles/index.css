@@ -1,0 +1,45 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+@import './responsive.css';
+
+/* Custom scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Prose styles for article content */
+.prose p {
+  margin-bottom: 1em;
+}
+
+.prose h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: #111827;
+}
+
+.prose h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  color: #111827;
+}
+
+/* Custom glow animation for Latest News */
+@keyframes glow-pulse {
+  0% { box-shadow: 0 0 8px rgba(220, 38, 38, 0.6); }
+  50% { box-shadow: 0 0 25px rgba(220, 38, 38, 1); }
+  100% { box-shadow: 0 0 8px rgba(220, 38, 38, 0.6); }
+}
+.animate-glow {
+  animation: glow-pulse 2s infinite ease-in-out;
+}
