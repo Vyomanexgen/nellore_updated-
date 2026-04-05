@@ -317,25 +317,25 @@ const TransportationPage = () => {
                     key={airport.id}
                     className="bg-white border border-[#E5E7EB] rounded-lg p-6 shadow-sm hover:shadow-md hover:border-purple-600 transition"
                   >
-                    <div className="flex items-start justify-between mb-3">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4">
                       <div>
-                        <h3 className="text-lg font-semibold text-[#111827] mb-2">{airport.name}</h3>
-                        <p className="text-sm text-[#6B7280] mb-3">{airport.description}</p>
+                        <h3 className="text-lg font-bold text-[#111827] mb-2">{airport.name}</h3>
+                        <p className="text-sm text-[#6B7280] leading-relaxed">{airport.description}</p>
                       </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                      <div className="flex items-center gap-2 text-sm">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                      <div className="flex items-center gap-2 text-sm bg-gray-50 px-3 py-2 rounded-md">
                         <MapPin className="w-4 h-4 text-[#6B7280]" />
-                        <span className="text-[#6B7280]">Distance: <span className="font-medium text-[#111827]">{airport.distance}</span></span>
+                        <span className="text-[#6B7280]">Distance: <span className="font-bold text-[#111827]">{airport.distance}</span></span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm">
+                      <div className="flex items-center gap-2 text-sm bg-gray-50 px-3 py-2 rounded-md">
                         <Car className="w-4 h-4 text-[#6B7280]" />
-                        <span className="text-[#6B7280]">By Road: <span className="font-medium text-[#111827]">{airport.travelTime}</span></span>
+                        <span className="text-[#6B7280]">By Road: <span className="font-bold text-[#111827]">{airport.travelTime}</span></span>
                       </div>
                     </div>
-                    <div className="flex gap-2 flex-wrap">
+                    <div className="flex gap-2 flex-wrap pt-2">
                       {airport.facilities.map((facility) => (
-                        <Badge key={facility} className="bg-purple-100 text-purple-700 hover:bg-purple-100">
+                        <Badge key={facility} className="bg-purple-100 text-purple-700 hover:bg-purple-100 border-none">
                           {facility}
                         </Badge>
                       ))}
@@ -357,14 +357,14 @@ const TransportationPage = () => {
                     key={transport.id}
                     className="bg-white border border-[#E5E7EB] rounded-lg p-5 shadow-sm hover:shadow-md hover:border-orange-600 transition"
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="text-4xl">{transport.icon}</div>
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
+                      <div className="text-5xl bg-orange-50 w-16 h-16 flex items-center justify-center rounded-full shrink-0">{transport.icon}</div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-[#111827] mb-2">{transport.name}</h3>
-                        <p className="text-sm text-[#6B7280] mb-2">{transport.description}</p>
-                        <div className="flex items-center gap-2 text-xs text-[#6B7280]">
+                        <h3 className="font-bold text-[#111827] mb-2">{transport.name}</h3>
+                        <p className="text-sm text-[#6B7280] mb-3 leading-relaxed">{transport.description}</p>
+                        <div className="flex items-center justify-center sm:justify-start gap-2 text-xs text-[#6B7280] bg-gray-50 py-1.5 px-3 rounded-full w-fit mx-auto sm:mx-0">
                           <Clock className="w-3 h-3" />
-                          <span>Available: {transport.availability}</span>
+                          <span>Available: <span className="font-semibold text-gray-700">{transport.availability}</span></span>
                         </div>
                       </div>
                     </div>

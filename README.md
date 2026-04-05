@@ -1,7 +1,7 @@
 
-  # NELLORE.IN wedsite
+  # NELLORE.IN website
 
-  This is a code bundle for NELLORE.IN wedsite. The original project is available at https://www.figma.com/design/9ErfulQmFs7HdMGSUWWA93/NELLORE.IN-wedsite.
+  This is a code bundle for NELLORE.IN website. The original project is available at https://www.figma.com/design/9ErfulQmFs7HdMGSUWWA93/NELLORE.IN-wedsite.
 
   ## Running the code
 

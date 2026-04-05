@@ -34,8 +34,8 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-white/80">
               <li><Link to="/" className="hover:text-white transition">{t.nav.home}</Link></li>
               <li><Link to="/jobs" className="hover:text-white transition">{t.nav.jobs}</Link></li>
-              <li><Link to="#" className="hover:text-white transition">{t.footer.topMandals}</Link></li>
-              <li><Link to="#" className="hover:text-white transition">{t.footer.constituencies}</Link></li>
+              <li><Link to="#" className="hover:text-white transition">{t.nav.news}</Link></li>
+              {/* <li><Link to="#" className="hover:text-white transition">{t.footer.constituencies}</Link></li> */}
             </ul>
           </div>
 

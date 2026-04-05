@@ -16,7 +16,7 @@ export const HamburgerMenu = () => {
     { to: '/events', label: t.nav.events },
     { to: '/results', label: t.nav.results },
     { to: '/sports', label: t.nav.sports },
-    { to: '/tourism', label: t.nav.tourism },
+    { to: '/tourism/stay', label: t.nav.tourism },
     { to: '/transportation', label: t.nav.transportation },
     { to: '/offers', label: t.nav.offers },
     { to: '/famous-foods', label: t.nav.famousFoods },

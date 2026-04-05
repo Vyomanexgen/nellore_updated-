@@ -46,9 +46,9 @@ const FamousFoodsPage = () => {
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Main Content Area */}
           <main className="flex-1 min-w-0 py-10">
-            <div className="mb-8">
-              <h1 className="text-[22px] font-semibold text-[#111827] mb-2">Famous Foods of Nellore</h1>
-              <p className="text-[13px] text-[#6B7280]">Authentic Telugu cuisine and local delicacies</p>
+            <div className="mb-8 text-center md:text-left">
+              <h1 className="text-2xl md:text-3xl font-bold text-[#111827] mb-2">Famous Foods of Nellore</h1>
+              <p className="text-sm md:text-base text-[#6B7280]">Authentic Telugu cuisine and local delicacies</p>
             </div>
 
             {/* Food Grid */}

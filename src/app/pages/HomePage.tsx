@@ -117,7 +117,7 @@ const HomePage = () => {
         
         <div className="relative max-w-[1280px] mx-auto px-5 h-full flex items-center justify-center" style={{ zIndex: 2 }}>
           <div className="text-white text-center max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
               {t.home.exploreTitle}
             </h1>
             <p className="text-xl mb-8 text-white/90">

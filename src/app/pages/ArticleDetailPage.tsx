@@ -58,14 +58,14 @@ const ArticleDetailPage = () => {
 
           {/* Hero Image */}
           <div
-            className="w-full h-96 bg-cover bg-center rounded-lg mb-6"
+            className="w-full h-64 md:h-96 bg-cover bg-center rounded-xl mb-6 shadow-sm"
             style={{ backgroundImage: `url(${article.image})` }}
           />
 
           {/* Article Header */}
           <div className="mb-8">
-            <Badge className="mb-4">{article.category}</Badge>
-            <h1 className="text-4xl font-bold text-[#111827] mb-4">{article.title}</h1>
+            <Badge className="mb-4 bg-[#E6F1FB] text-[#1A6FD4] hover:bg-[#E6F1FB] border-none">{article.category}</Badge>
+            <h1 className="text-2xl md:text-4xl font-bold text-[#111827] mb-4 leading-tight">{article.title}</h1>
             
             <div className="flex items-center gap-6 text-sm text-[#6B7280] mb-6">
               <div className="flex items-center gap-2">
@@ -122,11 +122,11 @@ const ArticleDetailPage = () => {
           {/* Social Share */}
           <div className="bg-[#F5F7FA] rounded-lg p-6 mb-12">
             <h3 className="font-semibold text-[#111827] mb-4">Share this article</h3>
-            <div className="flex gap-3">
-              <Button variant="outline">Facebook</Button>
-              <Button variant="outline">Twitter</Button>
-              <Button variant="outline">WhatsApp</Button>
-              <Button variant="outline">Copy Link</Button>
+            <div className="flex flex-wrap gap-3">
+              <Button variant="outline" className="flex-1 sm:flex-none border-gray-200 hover:bg-white hover:text-[#1A6FD4] hover:border-[#1A6FD4]">Facebook</Button>
+              <Button variant="outline" className="flex-1 sm:flex-none border-gray-200 hover:bg-white hover:text-[#1A6FD4] hover:border-[#1A6FD4]">Twitter</Button>
+              <Button variant="outline" className="flex-1 sm:flex-none border-gray-200 hover:bg-white hover:text-[#1A6FD4] hover:border-[#1A6FD4]">WhatsApp</Button>
+              <Button variant="outline" className="flex-1 sm:flex-none border-gray-200 hover:bg-white hover:text-[#1A6FD4] hover:border-[#1A6FD4]">Copy Link</Button>
             </div>
           </div>
 
