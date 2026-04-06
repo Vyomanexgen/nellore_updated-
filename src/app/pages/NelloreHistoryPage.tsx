@@ -1,247 +1,533 @@
-import AdsColumn, { tourismPageAds } from '../components/AdsColumn';
-import { Landmark, History, Star, MapPin, Feather, Utensils, Heart, Quote, Calendar, Award, BookOpen } from 'lucide-react';
-import { Badge } from '../components/ui/badge';
+// import AdsColumn, { tourismPageAds } from '../components/AdsColumn';
+// import { MapPin, Landmark } from 'lucide-react';
+// import { Badge } from '../components/ui/badge';
 
-const NelloreHistoryPage = () => {
-  const timeline = [
+// const NelloreHistoryPage = () => {
+
+//   const timeline = [
+//     {
+//       year: '3rd Century BC',
+//       title: 'Mauryan Influence',
+//       description: 'Nellore region was part of the Mauryan Empire and Ashoka’s inscriptions mention its importance.'
+//     },
+//     {
+//       year: '13th Century',
+//       title: 'Tikkana Era',
+//       description: 'Tikkana Somayaji translated major parts of the Mahabharata in Nellore.'
+//     },
+//     {
+//       year: '1700s',
+//       title: 'Venkatagiri Weaving',
+//       description: 'Venkatagiri sarees were developed under royal patronage for queens and elites.'
+//     },
+//     {
+//       year: '1952',
+//       title: 'Andhra State Movement',
+//       description: 'Potti Sreeramulu’s sacrifice led to the formation of Andhra State.'
+//     }
+//   ];
+
+//   return (
+//     <div className="bg-gray-50 min-h-screen">
+//       <div className="max-w-6xl mx-auto px-4 flex gap-8">
+
+//         {/* MAIN CONTENT */}
+//         <main className="flex-1 py-10">
+
+//           {/* HERO SECTION */}
+//           <div className="relative h-[400px] rounded-2xl overflow-hidden mb-16 shadow-md">
+//             <img
+//               src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Nellore_city_view.jpg"
+//               alt="Nellore City"
+//               className="w-full h-full object-cover"
+//             />
+//             <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-8">
+//               <Badge className="bg-blue-600 text-white w-fit mb-3">
+//                 Andhra Pradesh Tourism
+//               </Badge>
+
+//               <h1 className="text-4xl md:text-5xl text-white font-bold">
+//                 Nellore
+//               </h1>
+
+//               <p className="text-white/90 mt-2 max-w-xl">
+//                 A historic coastal city on the banks of the Penna River, known for temples, culture, and heritage.
+//               </p>
+//             </div>
+//           </div>
+
+//           {/* VENKATAGIRI SAREE */}
+//           <section className="grid md:grid-cols-2 gap-10 items-center mb-16">
+//             <img
+//               src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Venkatagiri_saree.jpg"
+//               alt="Venkatagiri Saree"
+//               className="rounded-xl shadow-md"
+//             />
+
+//             <div>
+//               <h2 className="text-3xl font-bold mb-4">Venkatagiri Sarees</h2>
+//               <p className="text-gray-600 leading-relaxed">
+//                 Venkatagiri sarees originated under royal patronage and were woven for queens and aristocrats. :contentReference[oaicite:0]{index=0}  
+//                 They are known for fine cotton texture and elegant zari work.
+//               </p>
+//             </div>
+//           </section>
+
+//           <hr className="my-12" />
+
+//           {/* TIKKANA */}
+//           <section className="grid md:grid-cols-2 gap-10 items-center mb-16">
+//             <div>
+//               <h2 className="text-3xl font-bold mb-4">Tikkana Somayaji</h2>
+//               <p className="text-gray-600 leading-relaxed">
+//                 Tikkana, one of the greatest Telugu poets, translated a major portion of the Mahabharata in Nellore, shaping Telugu literature.
+//               </p>
+//             </div>
+
+//             <img
+//               src="https://upload.wikimedia.org/wikipedia/commons/8/89/Tikkana_statue.jpg"
+//               alt="Tikkana Statue"
+//               className="rounded-xl shadow-md"
+//             />
+//           </section>
+
+//           <hr className="my-12" />
+
+//           {/* POTTI SREERAMULU */}
+//           <section className="grid md:grid-cols-2 gap-10 items-center mb-16">
+//             <img
+//               src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Potti_Sreeramulu.jpg"
+//               alt="Potti Sreeramulu"
+//               className="rounded-xl shadow-md"
+//             />
+
+//             <div>
+//               <h2 className="text-3xl font-bold mb-4">Potti Sreeramulu</h2>
+//               <p className="text-gray-600 leading-relaxed">
+//                 Potti Sreeramulu’s 58-day fast led to the formation of Andhra State, marking a turning point in Indian history. :contentReference[oaicite:1]{index=1}
+//               </p>
+//             </div>
+//           </section>
+
+//           <hr className="my-12" />
+
+//           {/* TEMPLE */}
+//           <section className="grid md:grid-cols-2 gap-10 items-center mb-16">
+//             <div>
+//               <h2 className="text-3xl font-bold mb-4">
+//                 Talpagiri Ranganathaswamy Temple
+//               </h2>
+//               <p className="text-gray-600 leading-relaxed">
+//                 Located on the banks of the Penna River, this ancient temple is one of the most important spiritual landmarks in Nellore. :contentReference[oaicite:2]{index=2}
+//               </p>
+
+//               <div className="flex items-center gap-2 mt-4 text-blue-600">
+//                 <MapPin size={18} />
+//                 Nellore, Andhra Pradesh
+//               </div>
+//             </div>
+
+//             <img
+//               src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Talpagiri_Ranganathaswamy_Temple.jpg"
+//               alt="Temple"
+//               className="rounded-xl shadow-md"
+//             />
+//           </section>
+
+//           <hr className="my-12" />
+
+//           {/* TIMELINE */}
+//           <section>
+//             <h2 className="text-3xl font-bold mb-8 text-center">
+//               Nellore History Timeline
+//             </h2>
+
+//             <ul className="space-y-6">
+//               {timeline.map((event, index) => (
+//                 <li key={index} className="border-l-4 border-blue-600 pl-4">
+//                   <p className="font-bold">{event.year}</p>
+//                   <p className="text-lg">{event.title}</p>
+//                   <p className="text-gray-600">{event.description}</p>
+//                 </li>
+//               ))}
+//             </ul>
+//           </section>
+
+//         </main>
+
+//         {/* ADS COLUMN */}
+//         <div className="hidden lg:block py-10">
+//           <AdsColumn ads={tourismPageAds} />
+//         </div>
+
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default NelloreHistoryPage;
+
+import AdsColumn, { tourismPageAds } from '../components/AdsColumn';
+import { useState } from 'react';
+import { MapPin, Info, ArrowUpRight, X } from 'lucide-react';
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription,
+  DialogClose
+} from '../components/ui/dialog';
+import { Badge } from '../components/ui/badge';
+import { ScrollArea } from '../components/ui/scroll-area';
+import { Separator } from '../components/ui/separator';
+
+const NellorePage = () => {
+
+  const [selectedItem, setSelectedItem] = useState<any>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const famousPlaces = [
     {
-      year: '3rd Century BC',
-      title: 'Mauryan Roots',
-      description: 'The region is mentioned in Ashoka\'s inscriptions, marking its early importance as a cultural and trade center.',
+      name: "Talpagiri Ranganathaswamy Temple",
+      img: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?q=80&w=1200",
+      desc: "Ancient temple on the banks of Penna River",
+      fullHistory: "One of the oldest temples in Nellore, dating back to the 7th-8th century Pallava era. The 7-story Gali Gopuram (wind tower) was added in the 19th century. Legend says the serpent Adisesha took the form of a hill (Talpagiri) for Lord Vishnu during his visit to Earth.",
+      facts: [
+        { label: "Built In", value: "7th-12th Century" },
+        { label: "Architecture", value: "Dravidian" },
+        { label: "Significance", value: "Lord Ranganatha Shrine" }
+      ],
+      tags: ["Heritage", "Spiritual", "River View"]
     },
     {
-      year: '1250-1300 AD',
-      title: 'The Era of Poets',
-      description: 'Tikkana Somayaji, the legendary Telugu poet, lived in Nellore while translating the Mahabharata into Telugu.',
+      name: "Mypadu Beach",
+      img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200",
+      desc: "Peaceful coastal beach near Nellore",
+      fullHistory: "Located 25km from Nellore city along the Bay of Bengal coast. It is managed by APTDC and is famous for its golden sands and serene atmosphere. It's a popular retreat for sunrises, peaceful beach walks, and small-scale water sports.",
+      facts: [
+        { label: "Distance", value: "25km from City" },
+        { label: "Managed By", value: "APTDC" }
+      ],
+      tags: ["Nature", "Coastal", "Leisure"]
     },
     {
-      year: '14th-16th Century',
-      title: 'Vijayanagara Glory',
-      description: 'Under Krishnadevaraya, Nellore saw a golden age of temple construction and regional prosperity.',
+      name: "Nellapattu Bird Sanctuary",
+      img: "https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=1200",
+      desc: "Famous for migratory birds",
+      fullHistory: "A vital breeding ground for the spot-billed pelican and other waterbirds. Characterized by Barringtonia swamp forests, it is one of the most important wetland habitats in India, attracting thousands of migratory birds between October and March.",
+      facts: [
+        { label: "Key Species", value: "Spot-billed Pelican" },
+        { label: "Best Season", value: "Oct to March" }
+      ],
+      tags: ["Ecotourism", "Wildlife"]
     },
     {
-      year: '1700s',
-      title: 'Royal Handlooms',
-      description: 'The Venkatagiri weaving tradition (Kali Mili) was formalized under the patronage of the Velugoti Dynasty.',
-    },
-    {
-      year: '1952',
-      title: 'Modern Andhra Birth',
-      description: 'Potti Sreeramulu sacrifice in Nellore becomes the catalyst for the linguistic reorganization of Indian states.',
-    },
+      name: "Jonnawada Temple",
+      img: "https://images.unsplash.com/photo-1582515073490-dc6c5c94f8c3?q=80&w=1200",
+      desc: "Spiritual center for devotees",
+      fullHistory: "Established around 1150 AD, this is a rare 'Shiva-Shakti' shrine where Lord Mallikarjuna and Goddess Kamakshi are worshipped together. Legend says that the idol of the Goddess was found in the Penna River by a fisherman and consecrated by Adi Shankaracharya.",
+      facts: [
+        { label: "Established", value: "1150 AD" },
+        { label: "Type", value: "Shakti Peetham" }
+      ],
+      tags: ["Spiritual", "Pilgrimage"]
+    }
   ];
 
+  const famousItems = [
+    {
+      name: "Venkatagiri Sarees",
+      img: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?q=80&w=1200",
+      desc: "Handwoven sarees with royal heritage",
+      fullHistory: "Originating in the 1700s under royal patronage, Venkatagiri sarees were woven exclusively for the Velugoti dynasty. They are extremely lightweight and famous for their fine cotton (woven air), intricate Jamdani-style motifs, and gold zari work.",
+      facts: [
+        { label: "Patronage", value: "Velugoti Dynasty" },
+        { label: "Style", value: "Jamdani Handloom" }
+      ],
+      tags: ["Heritage", "Textile", "Royal"]
+    },
+    {
+      name: "Nellore Chepala Pulusu",
+      img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=1200",
+      desc: "Spicy and tangy traditional fish curry",
+      fullHistory: "A legendary Andhra dish celebrated for its spicy, tangy flavor. This tamarind-based curry is traditionally slow-cooked in earthen pots. A signature characteristic is that it tastes even better the next day as the spices perfectly infuse with the fish.",
+      facts: [
+        { label: "Type", value: "Traditional Cuisine" },
+        { label: "Signature", value: "Tangy Tamarind Base" }
+      ],
+      tags: ["Culinary", "Traditional", "Famous Food"]
+    },
+    {
+      name: "Nellore Rice Cultivation",
+      img: "https://images.unsplash.com/photo-1598514982901-3eec1c1f8c44?q=80&w=1200",
+      desc: "Major agricultural hub of Andhra Pradesh",
+      fullHistory: "Known as the 'Rice Bowl of Andhra Pradesh', Nellore's fertile fields fed by the Penna River produce some of the finest rice varieties. Agriculture is the backbone of the region's economy, shaping the local culture and livelihood of thousands.",
+      facts: [
+        { label: "Key Crop", value: "Fine Rice" },
+        { label: "Source", value: "Penna River Basin" }
+      ],
+      tags: ["Agriculture", "Economic", "Nature"]
+    }
+  ];
+
+  const handleOpenItem = (item: any) => {
+    setSelectedItem(item);
+    setIsDialogOpen(true);
+  };
+
   return (
-    <div className="bg-[#FAF9F6] min-h-screen font-serif">
-      <div className="max-w-[1280px] mx-auto px-5">
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Main Content Area */}
-          <main className="flex-1 min-w-0 py-12">
-            
-            {/* Master Hero Section */}
-            <div className="relative rounded-[2.5rem] overflow-hidden mb-20 h-[450px] shadow-2xl border-4 border-white">
-              <div 
-                className="absolute inset-0 bg-cover bg-center scale-105"
-                style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1621252179027-94459d278660?w=1200&h=600&fit=crop")' }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A0F0A]/95 via-[#1A0F0A]/40 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-end p-10 md:p-16">
-                <Badge className="w-fit bg-[#C5A059] text-white hover:bg-[#C5A059] mb-4 px-6 py-2 uppercase tracking-[0.25em] text-[10px] font-sans border-none shadow-lg">
-                  Official Heritage Page
-                </Badge>
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-[1.1]">
-                  Nellore: <br /> <span className="text-[#C5A059]">The Eternal City</span>
-                </h1>
-                <p className="text-[#F3E5AB]/90 max-w-2xl text-lg md:text-2xl font-sans leading-relaxed italic border-l-4 border-[#C5A059] pl-6 py-2">
-                  "From the translation of the Mahabharata to the birth of a state, explore the soul of Andhra Pradesh."
-                </p>
-              </div>
-            </div>
+    <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
 
-            {/* Narrative Section 1: The Silk of Kings (Venkatagiri) */}
-            <section className="mb-32">
-              <div className="flex flex-col lg:flex-row items-center gap-16">
-                <div className="lg:w-1/2 space-y-8 order-2 lg:order-1">
-                  <div className="flex items-center gap-3 text-[#C5A059] font-sans font-bold uppercase tracking-[0.2em] text-xs">
-                    < Award className="w-5 h-5 shadow-sm" />
-                    GI Tagged Heritage (2011)
-                  </div>
-                  <h2 className="text-4xl md:text-5xl font-bold text-[#2C1810] leading-tight">The Royal <br /> Venkatagiri Weave</h2>
-                  <p className="text-[#5D4037] text-xl leading-relaxed font-sans opacity-95">
-                    Originally known as <span className="font-bold text-[#2C1810]">"Kali Mili"</span>, these sarees were woven exclusively for the Velugoti rulers. In 2011, they were awarded the <span className="underline decoration-[#C5A059] decoration-2">Geographical Indication (GI) tag</span> for their unique Jamdani style and fine cotton quality.
-                  </p>
-                  <div className="flex flex-wrap gap-4 pt-4">
-                    <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-full border border-[#E5E7EB] shadow-sm">
-                      <Star className="w-4 h-4 text-[#C5A059] fill-[#C5A059]" />
-                      <span className="text-sm font-sans font-semibold text-[#2C1810]">Velugoti Legacy</span>
-                    </div>
-                    <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-full border border-[#E5E7EB] shadow-sm">
-                      <Star className="w-4 h-4 text-[#C5A059] fill-[#C5A059]" />
-                      <span className="text-sm font-sans font-semibold text-[#2C1810]">Fine Zari Motifs</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="lg:w-1/2 order-1 lg:order-2">
-                  <div className="relative group">
-                    <div className="absolute -top-6 -right-6 w-full h-full border-2 border-[#C5A059] rounded-[2rem] -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition duration-500" />
-                    <img 
-                      src="https://images.unsplash.com/photo-1610030469668-9366df65e8a6?w=800&h=600&fit=crop" 
-                      alt="Detailed texture of an authentic Venkatagiri Zari border" 
-                      className="rounded-[2rem] shadow-2xl w-full h-[450px] object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            </section>
+      {/* ── Cinematic Hero ── */}
+      <div
+        style={{
+          position: 'relative',
+          height: '380px',
+          background: '#0F172A',
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: 'url(https://images.unsplash.com/photo-1593696140826-c58b021acf8b?q=80&w=1600)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            animation: 'slowZoom 14s ease-out forwards',
+            opacity: 0.45,
+          }}
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #F8FAFC 0%, rgba(15,23,42,0.6) 50%, rgba(15,23,42,0.3) 100%)' }} />
+        <div style={{ position: 'relative', textAlign: 'center', padding: '0 24px', zIndex: 2 }}>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '11px', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A34E', marginBottom: '16px' }}>
+            Andhra Pradesh Heritage
+          </p>
+          <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 700, color: '#fff', lineHeight: 1.15, marginBottom: '16px' }}>
+            The Timeless Legacy<br />
+            <em style={{ fontWeight: 400 }}>of Nellore</em>
+          </h1>
+          <p style={{ fontFamily: "'Inter', sans-serif", color: 'rgba(248,250,252,0.65)', fontSize: '15px', lineHeight: 1.7, maxWidth: '480px', margin: '0 auto' }}>
+            Culture, heritage, sacred sites, and the stories that shaped a civilization.
+          </p>
+        </div>
+      </div>
 
-            {/* Narrative Section 2: Literary Soul (Tikkana Somayaji) */}
-            <section className="mb-32">
-              <div className="bg-white rounded-[3rem] p-10 md:p-20 shadow-xl border border-[#E5E7EB] relative overflow-hidden">
-                <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#FAF9F6] rounded-full" />
-                <div className="flex flex-col lg:flex-row items-center gap-12 relative z-10">
-                   <div className="lg:w-1/3">
-                      <div className="w-full aspect-[3/4] bg-[#2C1810] rounded-2xl flex items-center justify-center p-8 text-center text-white italic">
-                         <div className="space-y-6">
-                            <BookOpen className="w-16 h-16 text-[#C5A059] mx-auto" />
-                            <p className="text-xl">"Kavi-Brahma"</p>
-                            <div className="h-px w-12 bg-[#C5A059] mx-auto" />
-                            <p className="text-sm opacity-80">Nellore's greatest literary giant who unified the Telugu heartland through poetry.</p>
-                         </div>
-                      </div>
-                   </div>
-                   <div className="lg:w-2/3 space-y-6">
-                      <div className="text-[#C5A059] font-sans font-bold uppercase tracking-widest text-xs">The Poet's Pen</div>
-                      <h2 className="text-3xl md:text-5xl font-bold text-[#2C1810]">Tikkana Somayaji & The Mahabharata</h2>
-                      <p className="text-[#5D4037] text-lg font-sans leading-relaxed">
-                        In the 13th century, Nellore served as the sanctuary for <span className="font-bold underline decoration-[#C5A059]">Tikkana Somayaji</span>. It was here that he translated 15 of the 18 books of the <span className="italic">Andhra Mahabharatam</span>, creating a literary bridge that defines Telugu identity even today.
-                      </p>
-                      <ul className="space-y-3 font-sans text-[#6B7280]">
-                        <li className="flex gap-3">
-                          <div className="w-1.5 h-1.5 bg-[#C5A059] rounded-full mt-2" />
-                          <span>Translated 15 Parvas of Mahabharata in Nellore.</span>
-                        </li>
-                        <li className="flex gap-3">
-                          <div className="w-1.5 h-1.5 bg-[#C5A059] rounded-full mt-2" />
-                          <span>Established the linguistic foundation of modern Telugu literature.</span>
-                        </li>
-                      </ul>
-                   </div>
-                </div>
-              </div>
-            </section>
+      <div style={{ maxWidth: '1140px', margin: '0 auto', padding: '0 24px' }}>
+        <div style={{ display: 'flex', gap: '48px', flexWrap: 'wrap' }}>
 
-            {/* Narrative Section 3: The Immortal Being (Potti Sreeramulu) */}
-            <section className="mb-32">
-              <div className="flex flex-col lg:flex-row items-center gap-16">
-                 <div className="lg:w-1/2">
-                   <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
-                     <img 
-                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=1000&fit=crop" 
-                        alt="Tribute to freedom and sacrifice in India" 
-                        className="w-full h-[500px] object-cover grayscale brightness-75 transition duration-700 hover:grayscale-0"
-                     />
-                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
-                        <Quote className="w-10 h-10 text-[#C5A059] mb-4" />
-                        <p className="text-white text-xl italic font-sans mb-2">"My life is my message."</p>
-                        <p className="text-[#F3E5AB] text-sm uppercase tracking-widest">The Immortal Fast</p>
-                     </div>
-                   </div>
-                 </div>
-                 <div className="lg:w-1/2 space-y-8">
-                   <div className="flex items-center gap-3 text-[#C5A059] font-sans font-bold uppercase tracking-[0.2em] text-xs">
-                     <Heart className="w-5 h-5 fill-[#C5A059]" />
-                     Father of Andhra Pradesh
-                   </div>
-                   <h2 className="text-4xl md:text-5xl font-bold text-[#2C1810]">Amarajeevi: The Spirit of Potti Sreeramulu</h2>
-                   <p className="text-[#5D4037] text-xl font-sans leading-relaxed">
-                     In 1952, <span className="font-bold underline decoration-[#C5A059]">Potti Sreeramulu</span> undertook a historic 58-day fast in Nellore district (now named after him). His ultimate sacrifice forced the government to create India's first linguistic state, birthing the identity of millions.
-                   </p>
-                   <div className="bg-[#E6F1FB] p-6 rounded-2xl border border-[#1A6FD4]/10">
-                     <div className="flex gap-4">
-                        <MapPin className="shrink-0 w-6 h-6 text-[#C5A059]" />
-                        <p className="text-sm font-sans text-[#2C1810]">Visit the <strong>Potti Sriramulu Memorial</strong> in Nellore City, a sacred site where his legacy is preserved for future generations.</p>
-                     </div>
-                   </div>
-                 </div>
-              </div>
-            </section>
+          {/* MAIN CONTENT */}
+          <main style={{ flex: 1, minWidth: 0, paddingTop: '64px', paddingBottom: '100px' }}>
 
-            {/* Narrative Section 4: Sacred Architecture */}
-            <section className="mb-32">
-                <div className="text-center mb-16">
-                   <div className="inline-flex items-center gap-2 text-[#C5A059] font-sans font-bold uppercase tracking-widest text-xs mb-4">
-                      <Landmark className="w-4 h-4" />
-                      The Spiritual Lifeline
-                   </div>
-                   <h2 className="text-4xl font-bold text-[#2C1810]">The Temple that Faces the Penna</h2>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-3xl overflow-hidden shadow-lg border border-[#E5E7EB]">
-                   <div className="p-10 space-y-6">
-                      <h3 className="text-2xl font-bold text-[#2C1810]">Sri Talpagiri Ranganathaswamy</h3>
-                      <p className="text-[#6B7280] leading-relaxed font-sans">
-                        Resting on the banks of the Penna River, this 600-year-old Dravidian masterpiece is famous for its <span className="font-bold text-[#2C1810]">West-facing deity</span>. Unlike most Hindu temples that face East, Lord Ranganatha here gazes toward the river, symbolizing his grace flowing over the lands of Nellore.
-                      </p>
-                      <div className="flex gap-6 pt-4">
-                         <div className="text-center">
-                            <p className="text-[#C5A059] font-bold text-2xl">70ft</p>
-                            <p className="text-[10px] uppercase text-[#9CA3AF]">Galigopuram</p>
-                         </div>
-                         <div className="w-px h-10 bg-[#E5E7EB]" />
-                         <div className="text-center">
-                            <p className="text-[#C5A059] font-bold text-2xl">7th c.</p>
-                            <p className="text-[10px] uppercase text-[#9CA3AF]">Foundation</p>
-                         </div>
-                      </div>
-                   </div>
-                   <div className="h-[400px]">
-                      <img 
-                        src="https://images.unsplash.com/photo-1605333396915-47ed6b68a00e?w=800&h=800&fit=crop" 
-                        alt="Ornate Dravidian Temple Galigopuram" 
-                        className="w-full h-full object-cover"
+            {/* FAMOUS PLACES */}
+            <section style={{ marginBottom: '80px' }}>
+              <div style={{ marginBottom: '36px' }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '11px', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A34E', marginBottom: '10px' }}>Destinations</p>
+                <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#0F172A', marginBottom: '12px' }}>Famous Places</h2>
+                <div style={{ width: '36px', height: '2px', background: '#C9A34E' }} />
+              </div>
+
+              <div style={{ display: 'flex', gap: '20px', overflowX: 'auto', paddingBottom: '12px' }} className="scrollbar-hide">
+                {famousPlaces.map((place, i) => (
+                  <div
+                    key={i}
+                    onClick={() => handleOpenItem(place)}
+                    style={{
+                      minWidth: '260px',
+                      borderRadius: '14px',
+                      overflow: 'hidden',
+                      background: '#fff',
+                      border: '1px solid rgba(226,232,240,0.7)',
+                      boxShadow: '0 2px 16px rgba(15,23,42,0.05)',
+                      cursor: 'pointer',
+                      transition: 'transform 0.5s ease-out, box-shadow 0.5s ease-out, border-color 0.5s ease-out',
+                      flexShrink: 0,
+                    }}
+                    onMouseEnter={e => { const el = e.currentTarget; el.style.transform = 'translateY(-4px)'; el.style.boxShadow = '0 14px 40px rgba(15,23,42,0.10)'; el.style.borderColor = 'rgba(201,163,78,0.3)'; }}
+                    onMouseLeave={e => { const el = e.currentTarget; el.style.transform = ''; el.style.boxShadow = '0 2px 16px rgba(15,23,42,0.05)'; el.style.borderColor = 'rgba(226,232,240,0.7)'; }}
+                  >
+                    <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
+                      <img
+                        src={place.img}
+                        alt={place.name}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.9s ease-out', display: 'block' }}
+                        onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.05)')}
+                        onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
                       />
-                   </div>
-                </div>
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15,23,42,0.5) 0%, transparent 60%)' }} />
+                    </div>
+                    <div style={{ padding: '16px 18px 18px' }}>
+                      <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '1rem', fontWeight: 700, color: '#0F172A', marginBottom: '6px' }}>{place.name}</h3>
+                      <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '13px', color: '#64748B', margin: 0 }}>{place.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </section>
 
-            {/* Final Vertical History Timeline */}
-            <section className="bg-white rounded-3xl p-10 md:p-20 shadow-2xl border border-[#E5E7EB]">
-               <div className="text-center mb-16">
-                 <h2 className="text-4xl font-bold text-[#2C1810] mb-4">The Sands of Chronology</h2>
-                 <p className="text-[#C5A059] font-sans uppercase tracking-[0.4em] text-xs font-bold">Nellore Historical Lineage</p>
-               </div>
-               
-               <div className="relative max-w-4xl mx-auto font-sans">
-                  <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-[2px] bg-[#C5A059]/20" />
-                  
-                  <div className="space-y-20">
-                    {timeline.map((event, idx) => (
-                      <div key={idx} className={`relative flex flex-col md:flex-row items-center ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                        <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-4 border-[#C5A059] rounded-full z-20 shadow-md" />
-                        
-                        <div className={`w-full md:w-1/2 pl-10 md:pl-0 ${idx % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
-                          <div className="inline-block bg-[#FAF9F6] text-[#C5A059] font-bold px-4 py-1 rounded-md border border-[#C5A059]/20 mb-3 text-sm">
-                            {event.year}
-                          </div>
-                          <h3 className="font-bold text-[#2C1810] text-2xl mb-2">{event.title}</h3>
-                          <p className="text-[#6B7280] leading-relaxed text-sm md:text-base">{event.description}</p>
-                        </div>
-                        <div className="hidden md:block w-1/2" />
-                      </div>
-                    ))}
+            {/* FAMOUS IN NELLORE */}
+            <section style={{ marginBottom: '60px' }}>
+              <div style={{ marginBottom: '36px' }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '11px', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A34E', marginBottom: '10px' }}>Heritage</p>
+                <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#0F172A', marginBottom: '12px' }}>Famous in Nellore</h2>
+                <div style={{ width: '36px', height: '2px', background: '#C9A34E' }} />
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: '24px' }}>
+                {famousItems.map((item, i) => (
+                  <div
+                    key={i}
+                    onClick={() => handleOpenItem(item)}
+                    style={{
+                      borderRadius: '14px',
+                      overflow: 'hidden',
+                      background: '#fff',
+                      border: '1px solid rgba(226,232,240,0.7)',
+                      boxShadow: '0 2px 16px rgba(15,23,42,0.05)',
+                      cursor: 'pointer',
+                      transition: 'transform 0.5s ease-out, box-shadow 0.5s ease-out, border-color 0.5s ease-out',
+                    }}
+                    onMouseEnter={e => { const el = e.currentTarget; el.style.transform = 'translateY(-4px)'; el.style.boxShadow = '0 14px 40px rgba(15,23,42,0.10)'; el.style.borderColor = 'rgba(201,163,78,0.3)'; }}
+                    onMouseLeave={e => { const el = e.currentTarget; el.style.transform = ''; el.style.boxShadow = '0 2px 16px rgba(15,23,42,0.05)'; el.style.borderColor = 'rgba(226,232,240,0.7)'; }}
+                  >
+                    <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
+                      <img
+                        src={item.img}
+                        alt={item.name}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.9s ease-out', display: 'block' }}
+                        onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.05)')}
+                        onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
+                      />
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15,23,42,0.5) 0%, transparent 55%)' }} />
+                    </div>
+                    <div style={{ padding: '18px 20px 20px' }}>
+                      <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '1.05rem', fontWeight: 700, color: '#0F172A', marginBottom: '8px' }}>{item.name}</h3>
+                      <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '13px', color: '#64748B', margin: 0, lineHeight: 1.6 }}>{item.desc}</p>
+                    </div>
                   </div>
-               </div>
+                ))}
+              </div>
             </section>
 
           </main>
 
-          {/* Right Ads Column */}
-          <div className="py-12">
+          {/* ADS */}
+          <div className="hidden lg:block py-16">
             <AdsColumn ads={tourismPageAds} />
           </div>
+
         </div>
       </div>
+
+      {/* HISTORY MODAL (DIALOG) — preserved with luxury upgrades */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="max-w-2xl p-0 overflow-hidden border-none bg-white rounded-2xl shadow-2xl">
+          {selectedItem && (
+            <div className="animate-in fade-in zoom-in duration-300">
+              {/* Modal Header Image */}
+              <div className="relative h-[280px] md:h-[380px] group/modal overflow-hidden">
+                <img
+                  src={selectedItem.img}
+                  alt={selectedItem.name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover/modal:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+                <div className="absolute top-4 right-4 z-50">
+                  <DialogClose className="p-2.5 bg-black/40 hover:bg-black/60 backdrop-blur-md border border-white/20 text-white rounded-full transition-all duration-300 hover:rotate-90 group">
+                    <X className="w-5 h-5 group-hover:scale-110" />
+                  </DialogClose>
+                </div>
+
+                <div className="absolute bottom-6 left-6 right-6 text-left">
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {selectedItem.tags?.map((tag: string, i: number) => (
+                      <span
+                        key={i}
+                        style={{
+                          fontFamily: "'Montserrat', sans-serif",
+                          fontSize: '10px',
+                          fontWeight: 600,
+                          letterSpacing: '0.1em',
+                          textTransform: 'uppercase',
+                          color: '#0F172A',
+                          background: '#C9A34E',
+                          padding: '3px 10px',
+                          borderRadius: '2px',
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <DialogTitle
+                    style={{
+                      fontFamily: "'Playfair Display', Georgia, serif",
+                      fontSize: '1.75rem',
+                      fontWeight: 700,
+                      color: '#fff',
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    {selectedItem.name}
+                  </DialogTitle>
+                </div>
+              </div>
+
+              <div className="p-6 md:p-8 text-left">
+                {/* Facts Grid */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '24px' }}>
+                  {selectedItem.facts?.map((fact: any, i: number) => (
+                    <div
+                      key={i}
+                      style={{
+                        padding: '12px 16px',
+                        borderRadius: '8px',
+                        background: '#F8FAFC',
+                        border: '1px solid rgba(201,163,78,0.15)',
+                      }}
+                    >
+                      <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '10px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#94A3B8', marginBottom: '4px' }}>
+                        {fact.label}
+                      </div>
+                      <div style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '0.95rem', fontWeight: 700, color: '#0F172A' }}>
+                        {fact.value}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <Separator className="mb-6" />
+
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
+                  <Info size={14} color="#C9A34E" />
+                  <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '10px', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A34E' }}>History & Legacy</span>
+                </div>
+
+                <ScrollArea className="h-[200px] md:h-[250px] pr-4">
+                  <DialogDescription
+                    style={{
+                      fontFamily: "'Playfair Display', Georgia, serif",
+                      fontSize: '1rem',
+                      fontStyle: 'italic',
+                      color: '#64748B',
+                      lineHeight: 1.8,
+                    }}
+                  >
+                    "{selectedItem.fullHistory}"
+                  </DialogDescription>
+                </ScrollArea>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
 
-export default NelloreHistoryPage;
+export default NellorePage;
